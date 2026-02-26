@@ -27,16 +27,20 @@ const Navbar = () => {
             Projects
           </NavLink>
 
-          <NavLink to="/approach" className={linkStyle}>
-            Approach
-          </NavLink>
-
-          <NavLink to="/resume" className={linkStyle}>
-            Resume
+          <NavLink to="/about" className={linkStyle}>
+            About
           </NavLink>
 
           <NavLink to="/contact" className={linkStyle}>
             Contact
+          </NavLink>
+
+          <NavLink to="/approach" className={linkStyle}>
+            Approach
+          </NavLink>
+          
+          <NavLink to="/resume" className={linkStyle}>
+            Resume
           </NavLink>
         </div>
 
