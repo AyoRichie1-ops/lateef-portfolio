@@ -2,23 +2,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import proj1 from "../../assets/proj1.png";
+import proj2 from "../../assets/proj2.png";
 
 const projects = [
+  {
+    title: "Jesuloba Electrical",
+    description: "High-performance storefront featuring seamless transitions, motion-heavy interactions, and a headless CMS.",
+    tags: ["Next.js", "Framer Motion", "Stripe", "Sanity"],
+    image: proj1,
+    live: "https://jesuloba.vercel.app/",
+    source: "https://github.com/AyoRichie1-ops/Jesuloba"
+  },
   {
     title: "Nexus Analytics Dashboard",
     description: "A comprehensive real-time data visualization platform for enterprise SaaS metrics with AI-driven insights.",
     tags: ["React", "TypeScript", "Recharts", "Tailwind"],
-    image: "/nexus.png", // Replace with your mockup
-    live: "#",
-    source: "#"
-  },
-  {
-    title: "Ethereal E-Commerce",
-    description: "High-performance storefront featuring seamless transitions, motion-heavy interactions, and a headless CMS.",
-    tags: ["Next.js", "Framer Motion", "Stripe", "Sanity"],
-    image: "/ethereal.png",
-    live: "#",
-    source: "#"
+    image: proj2, // Replace with your mockup
+    live: "http://task-web-amber.vercel.app/",
+    source: "https://github.com/AyoRichie1-ops/Task-Web"
   },
   {
     title: "Lumina Task Manager",
@@ -91,10 +93,10 @@ export default function SelectedProjects() {
 
                 {/* Action Buttons (Side by Side) */}
                 <div className="flex items-center justify-between pt-4 border-t border-gray-50">
-                  <a href={project.live} className="flex items-center gap-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-700">
+                  <a href={project.live} className="flex items-center gap-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-700" target="blank" rel="noopener noreferrer">
                     <ExternalLink size={14} /> Live Demo
                   </a>
-                  <a href={project.source} className="flex items-center gap-1.5 text-xs font-bold text-gray-400 hover:text-gray-600">
+                  <a href={project.source} className="flex items-center gap-1.5 text-xs font-bold text-gray-400 hover:text-gray-600" target="blank" rel="noopener noreferrer">
                     <Github size={14} /> Source
                   </a>
                 </div>
