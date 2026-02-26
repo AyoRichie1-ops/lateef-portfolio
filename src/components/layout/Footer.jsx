@@ -25,10 +25,10 @@ export default function Footer() {
             
             {/* Dark Mode Social Icons */}
             <div className="flex gap-4">
-              <a href="#" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
+              <a href="https://www.linkedin.com/in/abdullateef-onanusi-644927398" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
+              <a href="https://github.com/AyoRichie1-ops" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
                 <Github size={20} />
               </a>
               <a href="#" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
@@ -53,12 +53,12 @@ export default function Footer() {
             <h4 className="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em]">Let's Talk</h4>
             <p className="text-sm text-gray-400">Available for new opportunities.</p>
             <a href="mailto:onanusiabdullateef@gmail.com" className="group inline-flex flex-col gap-1">
-  <span className="text-xs text-gray-500 font-medium">Email Me</span>
-  <span className="text-base font-bold text-white group-hover:text-indigo-400 transition-colors flex items-center gap-2">
-    onanusiabdullateef@gmail.com
-    <Mail size={16} className="group-hover:translate-x-1 transition-transform" />
-  </span>
-</a>
+            <span className="text-xs text-gray-500 font-medium">Email Me</span>
+            <span className="text-base font-bold text-white group-hover:text-indigo-400 transition-colors flex items-center gap-2">
+              onanusiabdullateef@gmail.com
+              <Mail size={16} className="group-hover:translate-x-1 transition-transform" />
+            </span>
+          </a>
           </div>
         </div>
 

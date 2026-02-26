@@ -29,7 +29,7 @@ export default function Contact() {
     setErrors({});
     setIsSubmitting(true);
     formData.append("full_phone", phoneValue);
-    formData.append("access_key", "YOUR_KEY_HERE"); 
+    formData.append("access_key", "0de5244e-73c9-469e-aaf0-3e6a4f7cde92"); 
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
@@ -77,9 +77,13 @@ export default function Contact() {
             </div>
 
             <div className="pt-6 border-t border-gray-100 flex gap-4 text-gray-400">
-                <Linkedin size={20} className="hover:text-indigo-600 cursor-pointer transition-colors" />
+              <a href="https://www.linkedin.com/in/abdullateef-onanusi-644927398" target="_blank" rel="noopener noreferrer">
+                <Linkedin size={20} className="hover:text-indigo-600 cursor-pointer transition-colors"/>
+              </a>
+              <a href="https://github.com/AyoRichie1-ops" target="_blank" rel="noopener noreferrer">
                 <Github size={20} className="hover:text-indigo-600 cursor-pointer transition-colors" />
-                <MessageSquare size={20} className="hover:text-indigo-600 cursor-pointer transition-colors" />
+              </a>
+                {/* <MessageSquare size={20} className="hover:text-indigo-600 cursor-pointer transition-colors" /> */}
             </div>
           </div>
 

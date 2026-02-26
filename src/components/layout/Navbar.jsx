@@ -38,10 +38,10 @@ const Navbar = () => {
           <NavLink to="/approach" className={linkStyle}>
             Approach
           </NavLink>
-          
-          <NavLink to="/resume" className={linkStyle}>
+
+          {/* <NavLink to="/resume" className={linkStyle}>
             Resume
-          </NavLink>
+          </NavLink> */}
         </div>
 
         {/* Mobile Button */}

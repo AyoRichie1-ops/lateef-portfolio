@@ -62,11 +62,17 @@ export default function Resume() {
                     company: "Digital Creations",
                     period: "2020 - 2022",
                     desc: "Built custom e-commerce engines and integrated complex payment gateways for global clients."
+                  },
+                  {
+                    title:"Full Stack Web Developer",
+                    company: "Tech Studio Academy ",
+                    period: "Sept2023 - March2024",
+                    desc:"Completed intensive training focused on full stack web development, gaining hands-on experience in both frontend and backend technologies. Developed projects using HTML, CSS, JavaScript, and React.js to build responsive and functional interfaces. Learned backend development with Node.js, Express, and MongoDB, including RESTful API design, data modeling, and database integration. Practiced version control and collaboration through Git, working on code repositories and managing branches."
                   }
                 ].map((job, index) => (
                   <div key={index} className="relative">
-                    <div className="absolute -left-41px top-1 w-4 h-4 rounded-full bg-white border-4 border-indigo-600" />
-                    <span className="text-xs font-bold text-indigo-600 uppercase tracking-widest">{job.period}</span>
+                    <div className="absolute -left-41px top-1.5 w-4 h-4 rounded-full bg-white border-4 border-indigo-600" />
+                    <span className="text-xs pl-5 font-bold text-indigo-600 uppercase tracking-widest">{job.period}</span>
                     <h4 className="text-xl font-bold text-[#0A0B1E] mt-1">{job.title}</h4>
                     <p className="text-gray-400 font-medium mb-3">{job.company}</p>
                     <p className="text-gray-500 leading-relaxed max-w-xl">{job.desc}</p>
@@ -83,8 +89,8 @@ export default function Resume() {
               </div>
               <div className="bg-gray-50 p-8 rounded-2rem border border-gray-100">
                 <h4 className="text-xl font-bold text-[#0A0B1E]">B.Sc Computer Science</h4>
-                <p className="text-indigo-600 font-medium">University of Excellence</p>
-                <p className="text-gray-500 mt-2 italic text-sm">Graduated with Honors - Specialized in Software Engineering</p>
+                <p className="text-indigo-600 font-medium">Crescent University</p>
+                <p className="text-gray-500 mt-2 italic text-sm">Currently in Yr 2</p>
               </div>
             </section>
           </div>
