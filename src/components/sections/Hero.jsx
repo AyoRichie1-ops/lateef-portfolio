@@ -66,7 +66,7 @@ const Hero = () => {
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
               <Link
                 to="/resume" 
-                target="_blank"
+                // target="_blank"
                 rel="noopener noreferrer"
                 className="border border-gray-200 px-8 py-4 rounded-2xl text-sm font-bold text-center flex items-center justify-center gap-2 w-full bg-white text-[#0A0B1E] hover:border-indigo-600 transition-all shadow-sm"
               >
