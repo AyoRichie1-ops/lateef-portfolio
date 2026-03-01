@@ -64,6 +64,13 @@ const Navbar = () => {
           >
             Projects
           </NavLink>
+          <NavLink
+            to="/about"
+            className="block text-sm font-medium text-gray-700"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </NavLink>
 
           <NavLink
             to="/approach"
