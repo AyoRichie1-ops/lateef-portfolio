@@ -122,14 +122,14 @@ export default function Contact() {
                     <PhoneInput placeholder="Number" value={phoneValue} onChange={setPhoneValue} defaultCountry="NG" className="compact-phone" />
                   </div>
                 </div>
-                <div className="space-y-1.5">
+                {/* <div className="space-y-1.5">
                   <label className="text-[11px] font-bold text-gray-400 uppercase tracking-wider ml-1">Service</label>
                   <select name="subject" className="w-full px-5 py-3 rounded-xl bg-white border border-gray-200 focus:border-indigo-600 outline-none appearance-none text-sm cursor-pointer">
                     <option>Web Dev</option>
                     <option>UI Design</option>
                     <option>Full Project</option>
                   </select>
-                </div>
+                </div> */}
               </div>
 
               <div className="space-y-1.5">

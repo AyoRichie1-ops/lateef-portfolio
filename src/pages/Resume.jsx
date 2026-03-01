@@ -26,7 +26,7 @@ export default function Resume() {
             <p className="text-gray-500 mt-4 text-lg">Detailed overview of my professional journey.</p>
           </div>
           
-          <motion.a 
+          {/* <motion.a 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             href="/path-to-your-pdf.pdf"
@@ -34,7 +34,7 @@ export default function Resume() {
             className="flex items-center gap-2 bg-[#0A0B1E] text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-indigo-100 transition-all hover:bg-indigo-600"
           >
             <Download size={18} /> Download PDF
-          </motion.a>
+          </motion.a> */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-16">
