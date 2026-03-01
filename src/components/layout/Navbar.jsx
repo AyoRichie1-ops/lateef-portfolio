@@ -56,10 +56,10 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-6 pb-6 space-y-4 bg-white">
+        <div className="md:hidden px-6 pb-6 space-y-6 bg-white text-center">
           <NavLink
             to="/projects"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm font-medium text-gray-800"
             onClick={() => setIsOpen(false)}
           >
             Projects
@@ -73,13 +73,13 @@ const Navbar = () => {
             Approach
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/resume"
             className="block text-sm font-medium text-gray-700"
             onClick={() => setIsOpen(false)}
           >
             Resume
-          </NavLink>
+          </NavLink> */}
 
           <NavLink
             to="/contact"
