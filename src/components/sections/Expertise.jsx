@@ -14,11 +14,6 @@ const skills = [
     icon: <ShieldCheck className="w-7 h-7 text-indigo-600" />
   },
   {
-    title: "UI/UX Design",
-    description: "Intuitive user journeys and pixel-perfect layouts designed for conversion.",
-    icon: <Palette className="w-7 h-7 text-indigo-600" />
-  },
-  {
     title: "System Architecture",
     description: "Technical strategies ensuring long-term maintainability and performance.",
     icon: <LayoutDashboard className="w-7 h-7 text-indigo-600" />
@@ -64,13 +59,13 @@ export default function ExpertiseSection() {
           <div className="h-1.5 w-12 bg-indigo-600 mt-4 rounded-full mx-auto" />
         </motion.div>
 
-        {/* 4-Column Grid with Scroll Trigger */}
+        {/* Responsive grid sized to the current skill count */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }} // Starts when 20% of the grid is in view
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {skills.map((skill, index) => (
             <motion.div

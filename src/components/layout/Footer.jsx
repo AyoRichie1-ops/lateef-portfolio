@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
 
@@ -9,7 +10,13 @@ export default function Footer() {
 
   return (
     // Changed to your Deep Navy brand color
-    <footer className="bg-[#0A0B1E] pt-20 pb-10">
+    <motion.footer
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="bg-[#0A0B1E] pt-20 pb-10"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           
@@ -25,15 +32,15 @@ export default function Footer() {
             
             {/* Dark Mode Social Icons */}
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/abdullateef-onanusi-644927398" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
+              <motion.a whileHover={{ y: -4, scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://www.linkedin.com/in/abdullateef-onanusi-644927398" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
                 <Linkedin size={20} />
-              </a>
-              <a href="https://github.com/AyoRichie1-ops" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
+              </motion.a>
+              <motion.a whileHover={{ y: -4, scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://github.com/AyoRichie1-ops" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
                 <Github size={20} />
-              </a>
-              <a href="#" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
+              </motion.a>
+              <motion.a whileHover={{ y: -4, scale: 1.03 }} whileTap={{ scale: 0.97 }} href="#" className="p-3 bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all">
                 <Twitter size={20} />
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -68,7 +75,9 @@ export default function Footer() {
             © {new Date().getFullYear()} ABDULLATEEF. Built for Digital Excellence.
           </p>
           
-          <button 
+          <motion.button
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
             onClick={scrollToTop}
             className="group flex items-center gap-3 text-xs font-bold text-gray-400 hover:text-white transition-colors"
           >
@@ -76,9 +85,9 @@ export default function Footer() {
             <span className="p-2.5 bg-white/5 border border-white/10 rounded-full group-hover:bg-indigo-600 group-hover:border-indigo-500 transition-all">
               <ArrowUp size={14} />
             </span>
-          </button>
+          </motion.button>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

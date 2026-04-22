@@ -19,10 +19,10 @@ export default function About() {
           
           {/* Text Content */}
           <div className="lg:col-span-7">
-            <motion.h2 initial="hidden" animate="visible" variants={itemVariants} className="text-sm font-black text-indigo-600 uppercase tracking-[0.4em] mb-6">
+            <motion.h2 initial="hidden" animate="visible" variants={itemVariants} className="font-display text-sm font-black text-indigo-600 uppercase tracking-[0.4em] mb-6">
               The Architect
             </motion.h2>
-            <motion.h3 initial="hidden" animate="visible" variants={itemVariants} className="text-5xl md:text-7xl font-bold text-[#0A0B1E] tracking-tighter leading-tight mb-8">
+            <motion.h3 initial="hidden" animate="visible" variants={itemVariants} className="font-display text-5xl md:text-7xl font-bold text-[#0A0B1E] tracking-tighter leading-tight mb-8">
               BEHIND THE <span className="text-indigo-600">BLUEPRINT.</span>
             </motion.h3>
             <motion.p initial="hidden" animate="visible" variants={itemVariants} className="text-gray-500 text-xl leading-relaxed max-w-2xl relative z-10">
@@ -46,8 +46,8 @@ export default function About() {
             />
             {/* BLACK GRADIENT OVERLAY: Now static, always 60% dark at the bottom */}
             <div className="absolute inset-0 bg-linear-to-t from-[#0A0B1E]/60 via-[#0A0B1E]/30 to-transparent flex flex-col justify-end p-8">
-              <p className="text-white font-black text-xl uppercase tracking-tighter">Abdullateef</p>
-              <p className="text-indigo-400 font-bold uppercase tracking-widest text-[10px]">Lead Developer</p>
+              <p className="font-display text-white font-black text-xl uppercase tracking-tighter">Abdullateef</p>
+              <p className="font-display text-indigo-400 font-bold uppercase tracking-[0.22em] text-[10px]">Lead Developer</p>
             </div>
           </motion.div>
         </div>
@@ -64,7 +64,7 @@ export default function About() {
               <div className="p-3 bg-white/10 rounded-2xl text-indigo-400">
                 <Lightbulb size={24} />
               </div>
-              <h4 className="text-xl font-bold italic">Philosophy</h4>
+              <h4 className="font-display text-xl font-bold italic tracking-tight">Philosophy</h4>
             </div>
             <p className="text-gray-400 leading-relaxed">
               "Simple is hard." I take complex problems and forge them into 
@@ -83,8 +83,8 @@ export default function About() {
               { val: "∞", lab: "Coffee" }
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <p className="text-4xl font-black text-[#0A0B1E] tracking-tighter">{stat.val}</p>
-                <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">{stat.lab}</p>
+                <p className="font-display text-4xl font-black text-[#0A0B1E] tracking-tighter">{stat.val}</p>
+                <p className="font-display text-[10px] font-black text-gray-400 uppercase tracking-[0.22em] mt-1">{stat.lab}</p>
               </div>
             ))}
           </motion.div>
@@ -99,8 +99,8 @@ export default function About() {
                 <Globe2 size={28} />
               </div>
               <div>
-                <h4 className="font-bold text-[#0A0B1E]">Based in</h4>
-                <p className="text-indigo-600 font-bold text-lg">Lagos, Nigeria — Working Worldwide</p>
+                <h4 className="font-display font-bold text-[#0A0B1E] tracking-tight">Based in</h4>
+                <p className="font-display text-indigo-600 font-bold text-lg tracking-tight">Lagos, Nigeria — Working Worldwide</p>
               </div>
             </div>
             <ArrowUpRight className="text-indigo-300 group-hover:text-indigo-600 transition-colors" size={24} />

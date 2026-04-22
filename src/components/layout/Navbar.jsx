@@ -1,103 +1,109 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { Code2, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const linkStyle =
-    "text-sm font-medium text-gray-600 hover:text-indigo-600 transition";
+  const navLinks = [
+    { name: "Projects", path: "/projects" },
+    { name: "About", path: "/about" },
+    { name: "Approach", path: "/approach" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50">
+    <motion.header
+      initial={{ y: -24, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.55, ease: "easeOut" }}
+      className="w-full bg-white sticky top-0 z-50 shadow-sm"
+    >
       <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        
         {/* Logo */}
-        <NavLink
-          to="/"
-          className="flex items-center gap-2 text-lg font-semibold text-gray-900"
-        >
+        <motion.div whileHover={{ y: -1 }} transition={{ duration: 0.2 }}>
+          <NavLink to="/" className="font-display flex items-center gap-2 text-lg font-semibold tracking-tight text-gray-900">
           <Code2 size={20} className="text-indigo-600" />
           Abdullateef.dev
-        </NavLink>
+          </NavLink>
+        </motion.div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-10">
-          <NavLink to="/projects" className={linkStyle}>
-            Projects
-          </NavLink>
-
-          <NavLink to="/about" className={linkStyle}>
-            About
-          </NavLink>
-
-          <NavLink to="/contact" className={linkStyle}>
-            Contact
-          </NavLink>
-
-          <NavLink to="/approach" className={linkStyle}>
-            Approach
-          </NavLink>
-
-          {/* <NavLink to="/resume" className={linkStyle}>
-            Resume
-          </NavLink> */}
+          {navLinks.map((link) => (
+            <NavLink 
+              key={link.path} 
+              to={link.path} 
+              className={({ isActive }) =>
+                `relative inline-flex items-center py-1 text-sm font-semibold transition after:absolute after:left-0 after:-bottom-1.5 after:h-0.5 after:w-full after:origin-center after:rounded-full after:bg-indigo-600 after:transition-transform after:duration-300 ${
+                  isActive
+                    ? "text-indigo-600 after:scale-x-100"
+                    : "text-gray-600 hover:text-indigo-600 after:scale-x-0 hover:after:scale-x-100"
+                }`
+              }
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
 
-        {/* Mobile Button */}
-        <button
-          className="md:hidden text-gray-700"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
+        {/* Mobile Open Button */}
+        <button 
+          className="md:hidden p-1 text-gray-700" 
+          onClick={() => setIsOpen(true)}
+          aria-label="Open Menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          <Menu size={26} />
         </button>
       </nav>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden px-6 pb-6 space-y-6 bg-white text-center">
-          <NavLink
-            to="/projects"
-            className="block text-sm font-medium text-gray-800"
-            onClick={() => setIsOpen(false)}
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/about"
-            className="block text-sm font-medium text-gray-700"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </NavLink>
+      {/* Dark Overlay (Click to close) */}
+      <div
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm transition-opacity md:hidden ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
 
-          <NavLink
-            to="/approach"
-            className="block text-sm font-medium text-gray-700"
+      {/* Sidebar Drawer */}
+      <aside
+        className={`fixed top-0 right-0 h-full w-72 bg-white z-60 p-6 shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button Inside Sidebar */}
+        <div className="flex justify-end mb-6">
+          <button 
+            className="p-2 text-gray-500 hover:text-indigo-600 transition"
             onClick={() => setIsOpen(false)}
+            aria-label="Close Menu"
           >
-            Approach
-          </NavLink>
-
-          {/* <NavLink
-            to="/resume"
-            className="block text-sm font-medium text-gray-700"
-            onClick={() => setIsOpen(false)}
-          >
-            Resume
-          </NavLink> */}
-
-          <NavLink
-            to="/contact"
-            className="block text-sm font-medium text-gray-700"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </NavLink>
+            <X size={28} />
+          </button>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Links */}
+        <div className="flex flex-col gap-5">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={({ isActive }) =>
+                `text-lg font-semibold transition p-2 ${
+                  isActive
+                    ? "text-indigo-600"
+                    : "text-gray-800 hover:text-indigo-600"
+                }`
+              }
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </div>
+      </aside>
+    </motion.header>
   );
 };
 

@@ -50,6 +50,6 @@ export const projectData = [
   description: "A robust inventory system and digital storefront developed with me to streamline distribution for high-performance automotive power solutions.",
   tags: ["Node.js", "Express", "React", "Tailwind"],
   liveLink: "https://hoodnasnigerialimited.vercel.app/",
-  githubLink: "https://github.com/AyoRichie1-ops/hoodnasnigerialimited"
+  githubLink: "#"
 }
 ]

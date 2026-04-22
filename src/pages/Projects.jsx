@@ -19,7 +19,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-[#0A0B1E] tracking-tighter uppercase">
+          <h1 className="font-display text-5xl md:text-7xl font-bold text-[#0A0B1E] tracking-tighter uppercase">
             Works<span className="text-indigo-600">.</span>
           </h1>
         </div>
@@ -39,25 +39,25 @@ const Projects = () => {
             >
               <div className="relative aspect-video overflow-hidden">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute top-4 left-4 bg-white px-4 py-1.5 rounded-full text-[10px] font-black text-indigo-600 uppercase tracking-widest shadow-sm">
+                <div className="font-display absolute top-4 left-4 bg-white px-4 py-1.5 rounded-full text-[10px] font-black text-indigo-600 uppercase tracking-[0.22em] shadow-sm">
                   {project.category}
                 </div>
               </div>
 
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-[#0A0B1E] mb-3">{project.title}</h3>
+                <h3 className="font-display text-2xl font-bold text-[#0A0B1E] mb-3 tracking-tight">{project.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="text-[10px] font-bold text-gray-400 border border-gray-200 px-2.5 py-1 rounded-md uppercase">
+                    <span key={i} className="font-display text-[10px] font-bold text-gray-400 border border-gray-200 px-2.5 py-1 rounded-md uppercase tracking-[0.18em]">
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 <div className="flex items-center justify-between pt-6 border-t border-gray-100">
-                  <a href={project.githubLink} target="_blank" rel="noreferrer" className="text-[#0A0B1E] hover:text-indigo-600 transition-colors flex items-center gap-2 font-bold text-sm">
+                  <a href={project.githubLink} target="_blank" rel="noreferrer" className="font-display text-[#0A0B1E] hover:text-indigo-600 transition-colors flex items-center gap-2 font-bold text-sm uppercase tracking-[0.14em]">
                     <Github size={18} /> Code
                   </a>
                   <a href={project.liveLink} target="_blank" rel="noreferrer" className="bg-[#0A0B1E] text-white p-3 rounded-xl hover:bg-indigo-600 transition-all">
